@@ -1,69 +1,35 @@
-* {
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-
-.container {
-    text-align: center;
-}
-
-h1 {
-    margin-bottom: 20px;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #333;
-}
-
-.columns {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.column {
+    background-color: #f0f0f0;
+  }
+  
+  .checkerboard {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    gap: 0;
+  }
+  
+  .square {
     width: 50px;
-    height: 300px;
-    transition: all 0.3s ease;
-}
-
-.violet {
-    background-color: violet;
-}
-
-.indigo {
-    background-color: indigo;
-}
-
-.blue {
-    background-color: blue;
-}
-
-.green {
-    background-color: green;
-}
-
-.yellow {
-    background-color: yellow;
-}
-
-.orange {
-    background-color: orange;
-}
-
-.red {
-    background-color: red;
-}
-
-.column:hover {
-    filter: brightness(1.5);
-}
+    height: 50px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .square.black {
+    background-color: black;
+  }
+  
+  .square.white {
+    background-color: white;
+  }
+  
+  .square:hover {
+    background-color: #c10cd1; /* Change to yellow on hover */
+  }
+  
